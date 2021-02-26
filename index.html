@@ -403,6 +403,28 @@ element:hover, element:active {
 						<a style="font-size: 0;"></a>
 						<!--  <h3><blink>_</blink> -->
 						<h3>naveenjack.sh</h3>
+						<script src="https://apis.google.com/js/platform.js" async defer></script>
+                                                <meta name="google-signin-client_id" content="999640213029-gecrjsld8rglmeqet07lmgege9id5ulo.apps.googleusercontent.com">
+						<div class="g-signin2" data-onsuccess="onSignIn"></div>
+						function onSignIn(googleUser) {
+                                                         var profile = googleUser.getBasicProfile();
+                                                         console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+                                                         console.log('Name: ' + profile.getName());
+                                                         console.log('Image URL: ' + profile.getImageUrl());
+                                                         console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+                                                                               }
+						<a href="#" onclick="signOut();">Sign out</a>
+                                                <script>
+                                               function signOut() {
+                                                         var auth2 = gapi.auth2.getAuthInstance();
+                                                         auth2.signOut().then(function () {
+                                                         console.log('User signed out.');
+                                                                                           });
+                                                                   }
+                                                 </script>
+
+
+ 
 						<p><a href="https://github.com/naveenjack007" target="_blank" rel="noopener">GitHub</a></p>
 						<p><a href="https://thoughts.theden.sh/" target="_blank" rel="noopener">THOUGHTS|THEDEN</a></p>
 						<p><a href="https://au.linkedin.com/in/deniskhoshaba" target="_blank" rel="noopener">LinkedIn</a></p>
