@@ -1,3 +1,3 @@
 # mariocv
  
-[Website](https://vivirenremoto.github.io/mariocv/)
+[Website](https://naveenjack007.github.io)
